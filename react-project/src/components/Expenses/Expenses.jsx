@@ -1,29 +1,16 @@
 import "./Expenses.css";
-import "./ExpenseItem.jsx";
-import Card from "../../../UI/Card.jsx";
-import ExpensesFilter from "./ExpensesFilter.jsx";
+import ExpenseItem from "./ExpenseItem";
+import Card from "../UI/Card.jsx";
 
-function ExpenseList(props) {
-  return null;
+function Expenses(props) {
+  return (
+    <Card className="expenses">
+      {}
+      {props.expenses.map((expense) => (
+        <ExpenseItem key={expense.id} expenseData={expense} />
+      ))}
+    </Card>
+  );
 }
 
-const Expenses = (props) => {
-  const [filteredExpenses, setFilteredExpenses] = useState(props.expenses);
-
-  const filterChangeHandler = (year) => {
-    console.log(`year is ${year}`);
-
-    const newArray = props.expenses.filter(
-        (expense) => new Date(expense.date).getFullYear() === year,
-    );
-    setFilteredExpenses(newArray);
-  };
-
-  return (
-      <Card className="expenses">
-        <ExpensesFilter onChangeFilter={filterChangeHandler} />
-        <ExpenseList expenses={filteredExpenses}></ExpenseList>
-      </Card>
-  );
-};
 export default Expenses;

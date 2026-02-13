@@ -2,8 +2,8 @@ import "./ExpenseItem.jsx";
 import "./Expenses.css";
 import ExpensesFilter from "./ExpensesFilter.jsx";
 import { useState } from "react";
-import Card from "../../../UI/Card.jsx";
 import ExpenseList from "./ExpensesList.jsx";
+import Card from "../UI/Card.jsx";
 const Expenses = (props) => {
     const [filteredExpenses, setFilteredExpenses] = useState(props.expenses);
 
