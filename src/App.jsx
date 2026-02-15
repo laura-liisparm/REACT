@@ -17,12 +17,6 @@ let fakeExpenses = [
     price: 30.99,
   },
   {
-    id: "id3",
-    date: new Date(2025, 6, 2),
-    title: "new Dress",
-    price: 25.29,
-  },
-  {
     id: "id4",
     date: new Date(2026, 1, 1),
     title: "new Phone",
