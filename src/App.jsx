@@ -3,7 +3,7 @@ import NewExpense from "./components/NewExpense/NewExpense.jsx";
 import Expenses from "./components/Expenses/Expenses.jsx";
 import {useState} from "react";
 
-const fakeExpenses = [
+let fakeExpenses = [
   {
     id: "id1",
     date: new Date(2024, 10, 12),
@@ -35,9 +35,6 @@ function App() {
   const [expenses, SetExpenses] = useState(fakeExpenses);
 
   const addExpenseHandler = (expense) => {
-    console.log('In App.jsx')
-    console.log(expense)
-
     SetExpenses((previousExpenses) => {
       return [expense, ...previousExpenses];
     });
